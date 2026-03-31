@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+<<<<<<< HEAD
+    <file url="file://$PROJECT_DIR$/arquiteturaspring/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/estudos-spring-boot/produtosapi/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/produtosapi/produtosapi/src/main/java" charset="UTF-8" />
+=======
+    <file url="file://$PROJECT_DIR$/produtosapi/src/main/java" charset="UTF-8" />
+>>>>>>> 50ba3a3a0e616fa49bf70bd31bbe9c1fd989807c
+  </component>
+</project>
