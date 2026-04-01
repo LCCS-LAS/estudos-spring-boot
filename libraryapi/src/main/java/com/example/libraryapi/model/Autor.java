@@ -3,6 +3,8 @@ package com.example.libraryapi.model;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
+
 import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
@@ -11,6 +13,7 @@ import java.util.UUID;
 @Table(name ="autor")
 @Getter
 @Setter
+@ToString
 public class Autor {
 
     @Id
@@ -28,6 +31,7 @@ public class Autor {
     private String nacionalidade;
 
     @OneToMany(mappedBy = "autor")// Um autor pode ter muitos livros, mappedby para dizer que não existe esse coluna é apenas para mapear OneToMany
+    @Transient
     private List<Livro> livros;
 
 }
