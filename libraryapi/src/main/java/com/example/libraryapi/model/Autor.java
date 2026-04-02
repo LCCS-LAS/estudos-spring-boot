@@ -31,7 +31,6 @@ public class Autor {
     private String nacionalidade;
 
     @OneToMany(mappedBy = "autor")// Um autor pode ter muitos livros, mappedby para dizer que não existe esse coluna é apenas para mapear OneToMany
-    @Transient
     private List<Livro> livros;
 
 }

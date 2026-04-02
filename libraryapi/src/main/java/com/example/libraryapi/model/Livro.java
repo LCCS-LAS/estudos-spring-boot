@@ -2,6 +2,7 @@ package com.example.libraryapi.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.ToString;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -10,6 +11,7 @@ import java.util.UUID;
 @Entity
 @Table(name = "livro")
 @Data//Mesma coisa que @Getters @Setter porem tem mais funções como HashCode,toString,Constructor,NoConstructor entre outros
+@ToString(exclude = "autor")
 public class Livro {
 
     @Id
@@ -33,7 +35,7 @@ public class Livro {
     @Column(name = "preco", precision = 18, scale = 2)
     private BigDecimal preco;
 
-    @ManyToOne//Muitos livros para um autor
+    @ManyToOne(fetch = FetchType.LAZY)//Muitos livros para um autor
     @JoinColumn(name = "id_autor")
     private Autor autor;
 
